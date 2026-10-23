@@ -1,0 +1,199 @@
+/* ---------- Variables ---------- */
+:root {
+  --jaune: #ffd23f;
+  --encre: #1b1b3a;
+  --rouge: #e63946;
+  --bleu: #2a6fdb;
+  --blanc: #ffffff;
+
+  --titre: "Bowlby One", Impact, "Arial Black", sans-serif;
+  --texte: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--texte);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--encre);
+  background: var(--jaune);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--bleu);
+  outline-offset: 3px;
+}
+
+/* ---------- Navigation ---------- */
+.site-header {
+  background: var(--encre);
+  border-bottom: 5px solid var(--rouge);
+}
+
+.nav {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+}
+
+.nav__logo {
+  font-family: var(--titre);
+  font-size: 1.25rem;
+  color: var(--jaune);
+  text-decoration: none;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__list a {
+  display: block;
+  padding: 0.4rem 0.9rem;
+  color: var(--blanc);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: background 0.15s;
+}
+
+.nav__list a:hover {
+  background: var(--bleu);
+}
+
+.nav__list a[aria-current="page"] {
+  background: var(--rouge);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 5rem 1.5rem 6rem;
+  text-align: center;
+  background-color: var(--jaune);
+  /* trame de points façon bande dessinée */
+  background-image: radial-gradient(rgba(230, 57, 70, 0.35) 18%, transparent 20%);
+  background-size: 22px 22px;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: var(--titre);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 11vw, 7rem);
+  line-height: 1;
+  color: var(--blanc);
+  -webkit-text-stroke: 3px var(--encre);
+  paint-order: stroke fill;
+  text-shadow: 6px 6px 0 var(--encre);
+  transform: rotate(-2deg);
+}
+
+.hero__slogan {
+  display: inline-block;
+  margin: 2.5rem 0 0;
+  padding: 0.6rem 1.4rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--encre);
+  background: var(--blanc);
+  border: 3px solid var(--encre);
+  box-shadow: 5px 5px 0 var(--encre);
+}
+
+/* ---------- Présentation ---------- */
+.presentation {
+  max-width: 44rem;
+  margin: -2.5rem auto 4rem;
+  padding: 2.5rem 2rem;
+  background: var(--blanc);
+  border: 4px solid var(--encre);
+  box-shadow: 8px 8px 0 var(--encre);
+}
+
+.presentation h2 {
+  margin: 0 0 1rem;
+  font-family: var(--titre);
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--bleu);
+}
+
+.presentation p {
+  margin: 0 0 1.25rem;
+}
+
+/* ---------- Bouton ---------- */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  color: var(--blanc);
+  text-decoration: none;
+  background: var(--rouge);
+  border: 3px solid var(--encre);
+  box-shadow: 4px 4px 0 var(--encre);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--encre);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--bleu);
+  outline-offset: 4px;
+}
+
+/* ---------- Pied de page ---------- */
+.site-footer {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--blanc);
+  background: var(--encre);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 40rem) {
+  .nav {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 3.5rem 1rem 5rem;
+  }
+
+  .presentation {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
