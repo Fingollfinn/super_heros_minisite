@@ -30,8 +30,8 @@ cd super_heros_minisite
 
 ## Auteurs
 
-- Rhode Estimée Mayo
-- Antoine Dot
+- Rhode Estimée Mayo, alias [Zita01-tech](https://github.com/Zita01-tech) sur GitHub
+- Antoine Dot, alias [Fingollfinn](https://github.com/Fingollfinn) sur GitHub
 
 ## Dépôt
 
