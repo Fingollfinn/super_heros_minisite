@@ -1,9 +1,9 @@
 /* ---------- Variables ---------- */
 :root {
   --jaune: #ffd23f;
-  --encre: #1b1b3a;
+  --encre: #0c0cb9;
   --rouge: #e63946;
-  --bleu: #2a6fdb;
+  --bleu: #20447e;
   --blanc: #ffffff;
 
   --titre: "Bowlby One", Impact, "Arial Black", sans-serif;
@@ -31,7 +31,7 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-/* ---------- Navigation ---------- */
+
 .site-header {
   background: var(--encre);
   border-bottom: 5px solid var(--rouge);
@@ -87,7 +87,7 @@ a:focus-visible {
   padding: 5rem 1.5rem 6rem;
   text-align: center;
   background-color: var(--jaune);
-  /* trame de points façon bande dessinée */
+ 
   background-image: radial-gradient(rgba(230, 57, 70, 0.35) 18%, transparent 20%);
   background-size: 22px 22px;
 }
